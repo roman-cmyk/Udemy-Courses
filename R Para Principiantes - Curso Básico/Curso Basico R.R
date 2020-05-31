@@ -206,3 +206,10 @@ ggplot(data = iris, aes( x = Sepal.Width, fill = Species)) +
 ggtitle('Histograma y Curva de Densidad de Sepal Width') +
   xlab('Sepal Width') +
   geom_density(stat = 'density', alpha = I(0.2))
+
+# Ejemplo Boxplot
+
+mpg
+ggplot(mpg, aes(x = class, y = hwy)) +
+  geom_boxplot(aes(color = class)) +
+  ggtitle('Consumo de Combustible por Clase')
