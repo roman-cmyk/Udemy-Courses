@@ -181,4 +181,10 @@ c <- b + geom_smooth(method = 'lm')
 c + facet_grid(Species ~ . )
 
 
+head(ChickWeight,5)
+uno <- subset(ChickWeight, ChickWeight$Chick == 1)
+
+ggplot(data = ChickWeight, aes(x = Time , y = weight, group =Chick, colour = Diet)) +
+  geom_line() + ggtitle('Crecimiento de Pollos por Dieta')
+
             
