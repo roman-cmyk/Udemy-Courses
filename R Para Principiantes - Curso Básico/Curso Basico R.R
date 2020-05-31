@@ -162,3 +162,23 @@ hist(ventas)
 hist(visitas)
 
 pie(visitas, col = rainbow(length(ventas)), labels = c('lunes', 'martes'))
+
+
+#***---- Gráficos Avanzados Utilizando ggplot2
+library(ggplot2)
+iris
+
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, colour = Species)) +
+  geom_point()
+
+p <- ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, colour = Species))
+
+a <- p + geom_point(aes(shape = Species))
+
+b <- a + xlab('Sepal Length') + ylab('Sepal Width') + ggtitle('Sepal Length And Sepal Width')
+c <- b + geom_smooth(method = 'lm')
+
+c + facet_grid(Species ~ . )
+
+
+            
