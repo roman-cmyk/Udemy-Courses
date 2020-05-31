@@ -161,4 +161,4 @@ hist(ventas)
 
 hist(visitas)
 
-pie(visitas)
+pie(visitas, col = rainbow(length(ventas)), labels = c('lunes', 'martes'))
