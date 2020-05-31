@@ -187,4 +187,14 @@ uno <- subset(ChickWeight, ChickWeight$Chick == 1)
 ggplot(data = ChickWeight, aes(x = Time , y = weight, group =Chick, colour = Diet)) +
   geom_line() + ggtitle('Crecimiento de Pollos por Dieta')
 
+
+# Ejemplo Gráfico de Barras Apilado
+head(mpg, 5)
+
+ggplot(mpg, aes(class)) + geom_bar(aes(fill = drv))
+
+# Ejemplo Histograma
+ggplot(data = iris, aes( x = Sepal.Width)) + 
+  geom_histogram(binwidth = 0.2, color = 'black', fill = 'steelblue') +
+  ggtitle('Histograma de Sepal Width')
             
