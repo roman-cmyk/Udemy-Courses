@@ -197,4 +197,12 @@ ggplot(mpg, aes(class)) + geom_bar(aes(fill = drv))
 ggplot(data = iris, aes( x = Sepal.Width)) + 
   geom_histogram(binwidth = 0.2, color = 'black', fill = 'steelblue') +
   ggtitle('Histograma de Sepal Width')
-            
+
+
+
+
+# Ejemplo Histograma y Densidad de Curva
+ggplot(data = iris, aes( x = Sepal.Width, fill = Species)) + 
+ggtitle('Histograma y Curva de Densidad de Sepal Width') +
+  xlab('Sepal Width') +
+  geom_density(stat = 'density', alpha = I(0.2))
